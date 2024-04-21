@@ -29,7 +29,7 @@ public class Application {
 	@Bean
 	CommandLineRunner runner () {
 		return args -> {
-			Run run = new Run(1, "Morning Run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 10, Location.OUTDOOR);
+			Run run = new Run(1, LocalDateTime.now().getDayOfWeek()  ,"Morning Run", LocalDateTime.now(), LocalDateTime.now().plusHours(1), 10, Location.OUTDOOR);
 			log.info("Run: {}", run);
 		};
 	}
